@@ -1,5 +1,7 @@
 <?php
 
+//Singleton Pattern
+
 class Config {
 
 
