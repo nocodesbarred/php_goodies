@@ -63,7 +63,7 @@ $Boom = array_pop( $this->fleet );
 
 $Boom->explodeShip();
 
-echo ( $count == 1 )? "That was are last Ship!" : "";
+echo ( $count == 1 )? "That was our last Ship!" : "";
 
 }}}
 
