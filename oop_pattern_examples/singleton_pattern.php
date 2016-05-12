@@ -33,9 +33,11 @@ public function getProperty( $key ){
 }
 
 public function getAllProps(){
-	foreach ( $this->props as $key => $value ) {
+	
+     foreach ( $this->props as $key => $value ) {
 		echo "key: ".$key." value: ".$value."<br/>";
 	}
+	
 }
 
 }
