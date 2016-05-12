@@ -2,10 +2,12 @@
 
 abstract class Ship {
   
-  protected $name;
+protected $name;
 
-  function __construct( $name ){
+function __construct( $name ){
+
    $this->name = $name;
+
   }
 
 abstract function explodeShip();
@@ -15,7 +17,9 @@ abstract function explodeShip();
 class BattleShip extends Ship{
 
 function explodeShip(){
+
 	echo "The Battleship $this->name just exploded sir!<br/>";
+
 }
 
 }
@@ -23,7 +27,9 @@ function explodeShip(){
 class Cruiser extends Ship{
 
 function explodeShip(){
+
 	echo "The Cruiser $this->name just exploded sir!<br/>";
+
 }
 
 }
@@ -31,7 +37,9 @@ function explodeShip(){
 class BattleCruiser extends Ship{
 
 function explodeShip(){
+
 	echo "The Battle Cruiser $this->name just exploded sir!<br/>";
+
 }
 }
 
@@ -40,7 +48,7 @@ class Fleet {
 
 private $fleet = array();
 
-function addShipToFleet(Ship $ship){
+function addShipToFleet( Ship $ship ){
 
 $this->fleet[] = $ship;
 
@@ -48,23 +56,23 @@ $this->fleet[] = $ship;
 
 function weLostOne(){
 
-$count = count($this->fleet);
-if($count >0){
+$count = count( $this->fleet );
+if( $count > 0 ){
 
-$Boom = array_pop($this->fleet);
+$Boom = array_pop( $this->fleet );
 
 $Boom->explodeShip();
 
-echo ($count == 1)?"That was are last Ship!":"";
+echo ( $count == 1 )? "That was are last Ship!" : "";
 
 }}}
 
 
 $navyFleet = new Fleet();
 
-$navyFleet->addShipToFleet(new Battleship("Big Boy"));
-$navyFleet->addShipToFleet(new BattleCruiser("Snake Eyes"));
-$navyFleet->addShipToFleet(new Cruiser("Little Man"));
+$navyFleet->addShipToFleet( new Battleship( "Big Boy" ));
+$navyFleet->addShipToFleet( new BattleCruiser( "Snake Eyes" ));
+$navyFleet->addShipToFleet( new Cruiser( "Little Man" ));
 
 $navyFleet->weLostOne();
 $navyFleet->weLostOne();
